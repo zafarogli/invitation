@@ -159,8 +159,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   new Swiper('.mySwiper', {
-    slidesPerView: 1.6, // Show part of next/prev slides
-    spaceBetween: 24,
+    slidesPerView: 1.1, // Show part of next/prev slides
+    spaceBetween: 8,
     centeredSlides: true,
     loop: true,
     pagination: {
@@ -173,10 +173,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     breakpoints: {
       640: {
-        slidesPerView: 1.3,
+        slidesPerView: 1.1,
       },
       1024: {
-        slidesPerView: 1.3, // Increased width for larger screens
+        slidesPerView: 1.1, // Increased width for larger screens
       }
     }
   });

@@ -9,6 +9,13 @@
 .font-great-vibes {
   font-family: 'Great Vibes', cursive;
 }
+.font-tangerine {
+  font-family: 'Tangerine', cursive;
+}
+
+.font-rouge {
+  font-family: 'Rouge Script', cursive;
+}
 
 
 
@@ -203,4 +210,5 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 
