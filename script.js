@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slidesPerView: 1.6, // Show part of next/prev slides
     spaceBetween: 24,
     centeredSlides: true,
-    loop: true, // Enable infinite loop
+    loop: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
