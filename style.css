@@ -9,6 +9,7 @@
 .font-great-vibes {
   font-family: 'Great Vibes', cursive;
 }
+
 .font-tangerine {
   font-family: 'Tangerine', cursive;
 }
@@ -211,7 +212,27 @@
   scrollbar-width: none;
 }
 
+/* Carousel animatsiyasi uchun: asosiy rasm to'liq, yonidagilar esa kichikroq va xira ko'rinadi */
+.swiper-slide {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.5s;
+}
 
+.swiper-slide img {
+  opacity: 0.5;
+  transform: scale(0.92) translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.swiper-slide-active img,
+.swiper-slide-duplicate-active img {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  z-index: 2;
+}
 
-
+.swiper-slide-next img,
+.swiper-slide-prev img {
+  opacity: 0.7;
+  transform: scale(0.96) translateY(20px);
+  z-index: 1;
+}
