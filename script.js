@@ -4,13 +4,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function playAudio() {
     if (!started) {
-      audio.play().catch(() => { });
-      started = true;
+      audio.play().then(() => {
+        started = true;
+      }).catch(() => {
+        // Some browsers block autoplay, let user try again
+      });
     }
   }
 
-  document.addEventListener('touchstart', playAudio, { once: true }); // mobile
-  document.addEventListener('mousedown', playAudio, { once: true }); // desktop
+  // Listen for multiple user gestures for best compatibility
+  ['click', 'touchstart', 'mousedown', 'keydown'].forEach(event => {
+    document.body.addEventListener(event, playAudio);
+    window.addEventListener(event, playAudio);
+  });
 
   // Musiqani avtomatik ijro etish va takrorlash
   function autoplayMusic() {
